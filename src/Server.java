@@ -3,7 +3,8 @@ import java.net.*;
 
 public class Server {
 
-    public static void startServer(int port) { // Start the socket and display some verbose.
+    public static void startServer(int port) {
+        // Start the socket and display some verbose.
         System.out.println("Starting server...");
 
         try {
@@ -12,7 +13,6 @@ public class Server {
 
             Socket client = server.accept(); // Accept incoming connections.
             System.out.println("Client connected.");
-
         } catch (IOException e) {
             System.err.println("Server error:");
             e.printStackTrace();
@@ -21,11 +21,9 @@ public class Server {
 
     public static void main(String[] args) {
         // IP and Port of the socket.
-        String host = "127.0.0.1";
         int port = 5000;
 
         // Start server socket.
         startServer(port);
     }
 }
-
